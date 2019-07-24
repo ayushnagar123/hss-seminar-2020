@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>im Event</title>
 
@@ -15,6 +16,10 @@
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
     <!-- CSS Global -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
@@ -36,11 +41,8 @@
     <script src="assets/plugins/iesupport/respond.min.js"></script>
     <![endif]-->
 </head>
-<body id="home" class="wide body-dark">
+<body id="home" class="wide body-light">
 
-<div id="awwwards" class="honorable black left">
-<a href="http://awwwards.com/best-websites/im-event-event-landing-page/" target="_blank">Awwwards</a>
-</div>
 
 <!-- Preloader -->
 <div id="preloader">
@@ -77,11 +79,9 @@
                     <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#sponsors">Sponsors</a></li>
                     <li><a href="#speakers">Speakers</a></li>
                     <li><a href="#price">Price</a></li>
                     <li><a href="#location">Location</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
             <!-- /Navigation -->
@@ -127,11 +127,11 @@
                     <div class="container">
                         <div class="div-table">
                         <div class="div-cell">
-                            <h2 class="caption-title" data-animation="fadeInDown" data-animation-delay="100"><span>February 6-8, 2020</span></h2>
+                            <h2 class="caption-title" data-animation="fadeInDown" data-animation-delay="100"><span>January 17-19, 2015</span></h2>
                             <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300">Embracing the Transformative Times</h3>
                             <p class="caption-text">
-                                <a class="btn btn-theme btn-theme-xl scroll-to" href="#register" data-animation="flipInY" data-animation-delay="600"> Register <i class="fa fa-arrow-circle-right"></i></a><!--
-                                --><a class="btn btn-theme btn-theme-xl btn-theme-transparent-white" href="http://www.youtube.com/watch?v=O-zpOMYRi0w" data-gal="prettyPhoto" data-animation="flipInY" data-animation-delay="900">Watch video</a>
+                                <a class="btn btn-theme btn-theme-xl scroll-to" href="#register" data-animation="flipInY" data-animation-delay="600"> Register <i class="fa fa-arrow-circle-right"></i></a>
+                                <a class="btn btn-theme btn-theme-xl btn-theme-transparent-white" href="http://www.youtube.com/watch?v=O-zpOMYRi0w" data-gal="prettyPhoto" data-animation="flipInY" data-animation-delay="900">Watch video</a>
                             </p>
                         </div>
                         </div>
@@ -140,7 +140,7 @@
                 </div>
 
                 <!-- Slide -->
-                <div class="item page slide2">
+                <!-- <div class="item page slide2">
                     <div class="caption">
                     <div class="container">
                         <div class="div-table">
@@ -155,21 +155,21 @@
                                         </h1>
                                     </div>
 
-                                    <form id="registration-form-alt" name="registration-form-alt" class="registration-form alt" action="#" method="post">
+                                    <form class="registration-form alt" action="/" method="post">
                                         <div class="row">
                                             <div class="col-sm-12 form-alert"></div>
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <input
                                                             type="text" class="form-control input-name"
-                                                            data-toggle="tooltip" title="Name is required"
+                                                            data-toggle="tooltip" name="name" title="Name is required"
                                                             placeholder="Name and Surname"/>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <input
-                                                            type="text" class="form-control input-email"
+                                                            type="text" name="email" class="form-control input-email"
                                                             data-toggle="tooltip" title="Mail is required"
                                                             placeholder="Your Mail Here"/>
                                                 </div>
@@ -177,19 +177,18 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <input
-                                                            type="text" class="form-control input-phone"
+                                                            type="text" name="phone" class="form-control input-phone"
                                                             placeholder="Your Phone Number"/>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="form-group selectpicker-wrapper">
-                                                    <select
-                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
-                                                            data-toggle="tooltip" title="Select Your Price Tab">
-                                                        <option>Select Your Price Tab</option>
-                                                        <option>$100</option>
-                                                        <option>$200</option>
-                                                    </select>
+                                                    <div class="form-group">
+                                                        <input
+                                                                type="text" class="form-control input-cost2"
+                                                                data-toggle="tooltip" name="cost" title="Cost"
+                                                                value="5000" disabled/>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
@@ -197,7 +196,7 @@
                                                     <button
                                                             data-animation="flipInY" data-animation-delay="100"
                                                             class="btn btn-theme btn-block submit-button" type="submit"
-                                                            > Register Now <i class="fa fa-arrow-circle-right"></i></button>
+                                                            > Register Now <i class="glyphicon glyphicon-chevron-right"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -207,37 +206,37 @@
                                 </div>
                                 <div class="col-md-6 col-lg-8">
                                     <div class="text-holder">
-                                    <h2 class="caption-title">February 6-8, 2020</h2>
-                                    <h3 class="caption-subtitle">Embracing the Transformative Times</h3>
+                                    <h2 class="caption-title">January 17-19, 2015</h2>
+                                    <h3 class="caption-subtitle">PHP Conference ın ıstanbul </h3>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Event description -->
+                            Event description -->
                             <!-- /Event description -->
-                        </div>
+                        <!-- </div>
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> --> 
 
                 <!-- Slide -->
-                <div class="item page text-center slide3">
+                <!-- <div class="item page text-center slide3">
                     <div class="caption">
                     <div class="container">
                         <div class="div-table">
                         <div class="div-cell">
-                            <h2 class="caption-title"><span>February 6-8, 2020</span></h2>
+                            <h2 class="caption-title"><span>January 17-19, 2015</span></h2>
                             <h3 class="caption-subtitle">Embracing the Transformative Times</h3>
                             <p class="caption-text">
                                 <a class="btn btn-play" href="http://www.youtube.com/watch?v=O-zpOMYRi0w" data-gal="prettyPhoto"><i class="fa fa-play"></i></a>
                             </p>
-                            <!-- Event description -->
+                            Event description -->
                             <!-- /Event description -->
-                        </div>
+                        <!-- </div>
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
             </div>
@@ -267,7 +266,7 @@
                                             </span>
                                     <div class="media-body">
                                         <h4 class="media-heading">Location</h4>
-                                        <span>3200 Barbaros Bulvarı Besiktas/Istanbul, TR</span>
+                                        <span>Jaypee Institute of Information technology, Sec-62, Noida</span>
                                     </div>
                                 </div>
                             </div>
@@ -314,12 +313,11 @@
                 </h1>
                 <div class="row">
                     <div class="col-lg-8">
-                        <p data-animation="fadeInUp" data-animation-delay="300">With transformations taking place in the management landscape, information technology domain and the
-                            timeless society in several layers, it is time for us to revisit the repository of knowledge and redefine the
-                            notions. Research leaders and managers need to critically rethink the ways in which interdisciplinary research
-                            is conducted. With this context in mind, Department of Humanities and Social Sciences, Jaypee Institute of
-                            Information Technology has set an objective to readdress the emerging issues in management, IT and society
-                            conjointly and coherently in the form of international conference.</p>
+                        <p data-animation="fadeInUp" data-animation-delay="300">Praesent ac sem in neque venenatis tristique. Morbi et ligula velit. Nullam a augue vel mi porta
+                            vestibulum non ac elit. Vivamus convallis tortor et fermentum semper. In hac habitasse platea
+                            dictumst. Curabitur eget dui id metus pulvinar suscipit. Quisque vitae ligula laoreet, scelerisque
+                            leo quis, facilisis metus. Sed pellentesque, urna sed varius consectetur, eros augue fringilla
+                            magna, id sem magna vel diam. Nulla sed hendrerit nunc.</p>
                         <p class="btn-row">
                             <a href="#register" class="btn btn-theme btn-theme-xl scroll-to" data-animation="flipInY" data-animation-delay="200">Register <i class="fa fa-arrow-circle-right"></i></a><!--
                             --><a href="#" class="btn btn-theme btn-theme-xl btn-theme-transparent" data-animation="flipInY" data-animation-delay="400">Watch video</a>
@@ -450,9 +448,9 @@
                 <div class="schedule-wrapper clear" data-animation="fadeIn" data-animation-delay="200">
                     <div class="schedule-tabs lv1">
                         <ul id="tabs-lv1"  class="nav nav-justified">
-                            <li class="active"><a href="#tab-first" data-toggle="tab"><strong>Day 01</strong> <br/>06.02.2020</a></li>
-                            <li><a href="#tab-second" data-toggle="tab"><strong>Day 02</strong> <br/>07.02.2020</a></li>
-                            <li><a href="#tab-third" data-toggle="tab"><strong>Day 03</strong> <br/>08.02.2020</a></li>
+                            <li class="active"><a href="#tab-first" data-toggle="tab"><strong>Day 01</strong> <br/>17.05.2015</a></li>
+                            <li><a href="#tab-second" data-toggle="tab"><strong>Day 02</strong> <br/>18.05.2015</a></li>
+                            <li><a href="#tab-third" data-toggle="tab"><strong>Day 03</strong> <br/>19.05.2015</a></li>
                             <li><a href="#tab-last" data-toggle="tab"><strong>By speaker</strong></a></li>
                         </ul>
                     </div>
@@ -471,13 +469,13 @@
                                 <div id="tab-lv21-first" class="tab-pane fade in active">
                                     <div class="timeline">
 
-                                        <!-- <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="300">
+                                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="300">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -506,17 +504,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="200">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -545,17 +543,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="300">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -584,17 +582,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="200">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -623,7 +621,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -634,11 +632,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -667,17 +665,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -706,17 +704,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -745,7 +743,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -756,11 +754,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -789,17 +787,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -828,7 +826,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -839,11 +837,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -872,17 +870,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -911,10 +909,10 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
-                                        </article> -->
-                                        <h1 style="align:cente;r">Comming Soon</h1>
+                                        </article>
+
                                     </div>
                                 </div>
                             </div>
@@ -933,13 +931,13 @@
                                 <div id="tab-lv22-first" class="tab-pane fade in active">
                                     <div class="timeline">
 
-                                        <!-- <article class="post-wrap">
+                                        <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -968,17 +966,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1007,17 +1005,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1046,17 +1044,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1085,7 +1083,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -1096,11 +1094,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1129,17 +1127,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1168,17 +1166,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1207,7 +1205,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -1218,11 +1216,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1251,17 +1249,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1290,7 +1288,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -1301,11 +1299,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1334,17 +1332,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1373,10 +1371,10 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
-                                        </article> -->
-                                        <h1>Comming Soon</h1>
+                                        </article>
+
                                     </div>
                                 </div>
                             </div>
@@ -1395,13 +1393,13 @@
                                 <div id="tab-lv23-first" class="tab-pane fade in active">
                                     <div class="timeline">
 
-                                        <!-- <article class="post-wrap">
+                                        <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1430,17 +1428,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1469,17 +1467,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1508,7 +1506,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -1519,11 +1517,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1552,17 +1550,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1591,7 +1589,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -1602,11 +1600,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1635,17 +1633,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1674,7 +1672,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -1684,11 +1682,11 @@
 
                                     <article class="post-wrap">
                                         <div class="media">
-                                            
+                                            <!-- -->
                                             <div class="post-media pull-left">
                                                 <img src="assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
                                             </div>
-                                            
+                                            <!-- -->
                                             <div class="media-body">
                                                 <div class="post-header">
                                                     <div class="post-meta">
@@ -1717,17 +1715,17 @@
                                                         </span>
                                                 </div>
                                             </div>
-                                            
+                                            <!-- -->
                                         </div>
                                     </article>
 
                                     <article class="post-wrap">
                                         <div class="media">
-                                            
+                                            <!-- -->
                                             <div class="post-media pull-left">
                                                 <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                             </div>
-                                            
+                                            <!-- -->
                                             <div class="media-body">
                                                 <div class="post-header">
                                                     <div class="post-meta">
@@ -1756,17 +1754,17 @@
                                                         </span>
                                                 </div>
                                             </div>
-                                            
+                                            <!-- -->
                                         </div>
                                     </article>
 
                                     <article class="post-wrap">
                                         <div class="media">
-                                            
+                                            <!-- -->
                                             <div class="post-media pull-left">
                                                 <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                             </div>
-                                            
+                                            <!-- -->
                                             <div class="media-body">
                                                 <div class="post-header">
                                                     <div class="post-meta">
@@ -1795,17 +1793,17 @@
                                                         </span>
                                                 </div>
                                             </div>
-                                            
+                                            <!-- -->
                                         </div>
                                     </article>
 
                                     <article class="post-wrap">
                                         <div class="media">
-                                            
+                                            <!-- -->
                                             <div class="post-media pull-left">
                                                 <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                             </div>
-                                            
+                                            <!-- -->
                                             <div class="media-body">
                                                 <div class="post-header">
                                                     <div class="post-meta">
@@ -1834,10 +1832,10 @@
                                                         </span>
                                                 </div>
                                             </div>
-                                            
+                                            <!-- -->
                                         </div>
-                                    </article> -->
-                                    <h1>Comming Soon</h1>
+                                    </article>
+
                                 </div></div>
                             </div>
                         </div>
@@ -1855,13 +1853,13 @@
                                 <div id="tab-lv24-first" class="tab-pane fade in active">
                                     <div class="timeline">
 
-                                        <!-- <article class="post-wrap">
+                                        <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1890,17 +1888,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1929,7 +1927,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -1940,11 +1938,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -1973,17 +1971,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -2012,7 +2010,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -2023,11 +2021,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -2056,17 +2054,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -2095,7 +2093,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
@@ -2106,11 +2104,11 @@
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -2139,17 +2137,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -2178,17 +2176,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -2217,17 +2215,17 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
                                         </article>
 
                                         <article class="post-wrap">
                                             <div class="media">
-                                                
+                                                <!-- -->
                                                 <div class="post-media pull-left">
                                                     <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
                                                 </div>
-                                                
+                                                <!-- -->
                                                 <div class="media-body">
                                                     <div class="post-header">
                                                         <div class="post-meta">
@@ -2256,9 +2254,9 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+                                                <!-- -->
                                             </div>
-                                        </article> -->
+                                        </article>
 
                                     </div>
                                 </div>
@@ -2273,33 +2271,7 @@
         <!-- /PAGE SCHEDULE -->
 
         <!-- PAGE SPONSORS -->
-        <!-- <section class="page-section" id="sponsors">
-            <div class="container">
-                <h1 class="section-title">
-                    <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>
-                    <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Event Sponsors <small> / dont forget it</small></span>
-                </h1>
-                <div class="partners-carousel" data-animation="fadeInUp" data-animation-delay="300">
-                    <div class="owl-carousel">
-                        <div><a href="#"><img src="assets/img/partner/light/partner-1.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-2.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-3.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-4.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-5.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-6.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-1.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-2.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-3.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-4.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-5.png" alt=""/></a></div>
-                        <div><a href="#"><img src="assets/img/partner/light/partner-6.png" alt=""/></a></div>
-                    </div>
-                </div>
-                <div class="text-center margin-top">
-                    <a data-animation="flipInY" data-animation-delay="500" href="#" class="btn btn-theme"><i class="fa fa-thumbs-up"></i> Become a sponsor</a>
-                </div>
-            </div>
-        </section> -->
+        
         <!-- /PAGE SPONSORS -->
 
         <section class="page-section color">
@@ -2390,13 +2362,13 @@
         <!-- PAGE SPEAKERS -->
         <section class="page-section light" id="speakers">
             <div class="container">
-                <!-- <h1 class="section-title">
+                <h1 class="section-title">
                     <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-user fa-stack-1x"></i></span></span>
                     <span data-animation="fadeInUp" data-animation-delay="500" class="title-inner">Event Speakers <small> / meet with greaters</small></span>
-                </h1> -->
+                </h1>
 
                 <!-- Speakers row -->
-                <!-- <div class="row thumbnails clear">
+                <div class="row thumbnails clear">
                     <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="100">
                         <div class="thumbnail no-border no-padding text-center">
                             <div class="hex">
@@ -2435,7 +2407,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!-- -->
                     <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="300">
                         <div class="thumbnail no-border no-padding text-center">
                             <div class="hex">
@@ -2474,7 +2446,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!-- -->
                     <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="500">
                         <div class="thumbnail no-border no-padding text-center">
                             <div class="hex">
@@ -2513,7 +2485,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!-- -->
                     <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="700">
                         <div class="thumbnail no-border no-padding text-center">
                             <div class="hex">
@@ -2552,12 +2524,12 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- /Speakers row -->
 
-                <!-- <div class="text-center margin-top">
+                <div class="text-center margin-top">
                     <a data-animation="fadeInUp" data-animation-delay="100" href="#" class="btn btn-theme"><i class="fa fa-user"></i> See all speakers</a>
-                </div> -->
+                </div>
             </div>
         </section>
         <!-- /PAGE SPEAKERS -->
@@ -2644,49 +2616,48 @@
                     <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
                     <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">Register now <small> / dont mıss event!</small></span>
                 </h1>
-                <form id="registration-form" name="registration-form" class="registration-form" action="#" method="post">
+                <form class="registration-form alt" action="/" method="post">
                     <div class="row">
                         <div class="col-sm-12 form-alert"></div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="form-group" data-animation="fadeInUp" data-animation-delay="200">
+                        <div class="col-sm-12">
+                            <div class="form-group">
                                 <input
                                         type="text" class="form-control input-name"
-                                        data-toggle="tooltip" title="Name is required"
+                                        data-toggle="tooltip" name="name" title="Name is required"
                                         placeholder="Name and Surname"/>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="form-group" data-animation="fadeInUp" data-animation-delay="400">
+                        <div class="col-sm-12">
+                            <div class="form-group">
                                 <input
-                                        type="text" class="form-control input-email"
+                                        type="text" name="email" class="form-control input-email"
                                         data-toggle="tooltip" title="Mail is required"
                                         placeholder="Your Mail Here"/>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="form-group" data-animation="fadeInUp" data-animation-delay="600">
+                        <div class="col-sm-12">
+                            <div class="form-group">
                                 <input
-                                        type="text" class="form-control input-phone"
+                                        type="text" name="phone" class="form-control input-phone"
                                         placeholder="Your Phone Number"/>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="form-group selectpicker-wrapper" data-animation="fadeInUp" data-animation-delay="800">
-                                <select
-                                        class="selectpicker input-price" data-live-search="true" data-width="100%"
-                                        data-toggle="tooltip" title="Select Your Price Tab">
-                                    <option>Select Your Price Tab</option>
-                                    <option>$100</option>
-                                    <option>$200</option>
-                                </select>
+                        <div class="col-sm-12">
+                            <div class="form-group selectpicker-wrapper">
+                                <div class="form-group">
+                                    <input
+                                            type="text" class="form-control input-cost2"
+                                            data-toggle="tooltip" name="cost" title="Cost"
+                                            value="5000" disabled/>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-12 overflowed">
-                            <div class="text-center margin-top">
+                        <div class="col-sm-12">
+                            <div class="text-center">
                                 <button
                                         data-animation="flipInY" data-animation-delay="100"
-                                        class="btn btn-theme btn-theme-xl submit-button" type="submit"
-                                        > Register Now <i class="fa fa-arrow-circle-right"></i></button>
+                                        class="btn btn-theme btn-block submit-button" type="submit"
+                                        > Register Now <i class="glyphicon glyphicon-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -2798,18 +2769,7 @@
             </div>
         </section>
         <!-- Donation -->
-        <section class="page-section color">
-            <div class="container">
-                <h1 class="section-title">
-                    <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
-                    <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">im Event  <small> / Landing Page</small></span>
-                </h1>
-                <p>One Page Event and Conference Theme is a very clean, modern and outstanding designed HTML template for multi purpose for any business events, conference, party etc.</p>
-                <p>
-                    <a class="btn btn-theme" target="_blank" href="http://themeforest.net/item/im-event-one-page-event-conference-landing-page/8334416">Purchase template</a>
-                </p>
-            </div>
-        </section>
+        
         <!-- /Donation -->
         <section class="page-section">
             <div class="container">
@@ -2819,7 +2779,7 @@
                 </h1>
                 <div class="row post-row">
 
-                    
+                    <!-- -->
                     <div class="col-md-4">
                         <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
                             <div class="post-media">
@@ -2855,7 +2815,7 @@
                         </article>
                     </div>
 
-                    
+                    <!-- -->
                     <div class="col-md-4">
                         <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="300">
                             <div class="post-media">
@@ -2891,7 +2851,7 @@
                         </article>
                     </div>
 
-                    
+                    <!-- -->
                     <div class="col-md-4">
                         <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="500">
                             <div class="post-media">
@@ -2935,33 +2895,51 @@
         </section>
 
         <!-- PAGE LOCATION -->
-        <section class="page-section" id="location">
-            <div class="container full-width gmap-background">
-
-                <div class="container">
-                    <div class="on-gmap color">
-                        <h1 class="section-title">
-                            <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
-                            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Event Location</span>
-                        </h1>
-                        <p data-animation="fadeInUp" data-animation-delay="200" class="text-uppercase">Apple Store SOHO‎ <br/>
-                            103 Prince St New York, <br/>
-                            NY 10012, United States <br/>
-                            +1 212-226-3126</p>
-                        <p><a href="mailto:youremail@domain.com">hello@imevent.com</a></p>
-                        <a href="#" class="btn btn-theme"
-                           data-animation="flipInY" data-animation-delay="300">Get Direction <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
+        <div id="location"></div>
+        <section id="google-map-area">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div id="conatiner-map">
+                      <div id="map" style="width: 100%; height: 400px; background-color: grey; "></div>
+                        <script>
+                            function initMap(){
+                                var map = new google.maps.Map(document.getElementById('map'), {center: {lat: 28.630044, lng: 77.372082},
+                                    zoom: 18,
+                                    fullscreenControl: false,
+                                    gestureHandling: 'cooperative'
+                                });
+                                var marker = new google.maps.Marker({position: {lat: 28.630044, lng: 77.372082}, map: map});
+                            }
+                            /*$(document).ready(function(e){
+                                loadComplete();
+                            });*/
+                            $(".nav-item").hover(function() {
+                                var s = $(this).children('a').children('span');
+                                s.show();
+                            }, function() {
+                                var s = $(this).children('a').children('span');
+                                s.hide();
+                            });
+                            function loadComplete(){
+                                $(".preloader").addClass('animated fadeOut');
+                                $(".preloader").css('display', 'none');
+                                $(".fullBody").css('display', 'block');
+                                $(".fullBody").addClass('animated fadeIn');
+                                particlesJS.load('particles-js', '/javascripts/particles.json', function(){
+                                    }
+                                );
+                                $(".main-page").hide();
+                                $(".home").show();
+                            }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnu2aaSXGSKGFat68JrW7oDNLVegDUvYI&callback=initMap"></script>
+                   </div>
                 </div>
-
-                <!-- Google map -->
-                <div class="google-map">
-                    <div id="map-canvas"></div>
-                </div>
-                <!-- /Google map -->
-
+              </div>
             </div>
-        </section>
+          </section>
+                <!-- /Google map -->
         <!-- /PAGE LOCATION -->
 
         <!-- PAGE CONTACT -->
@@ -3063,7 +3041,7 @@
 <script src="assets/plugins/waypoints/waypoints.min.js"></script>
 <script src="assets/plugins/countdown/jquery.plugin.min.js"></script>
 <script src="assets/plugins/countdown/jquery.countdown.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> -->
 
 <script src="assets/js/theme-ajax-mail.js"></script>
 <script src="assets/js/theme.js"></script>
@@ -3071,7 +3049,7 @@
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/plugins/jquery.cookie.js"></script>
-<script src="assets/js/theme-config-dark.js"></script>
+<!-- <script src="assets/js/theme-config-light.js"></script> -->
 <!--<![endif]-->
 
 <script type="text/javascript">
