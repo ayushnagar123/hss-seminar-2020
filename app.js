@@ -1,4 +1,3 @@
-
 if(process.env.NODE_ENV!== 'production'){
     require('dotenv').config()
 }
@@ -7,17 +6,44 @@ const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 
 const express = require('express')
 const app = express()
+const stripe = require('stripe')(stripeSecretKey)
+const bodyParser = require('body-parser')
 
 const port =  process.env.PORT || 3000
+
+app.set('views',__dirname+'/views')
+app.set('view engine','hbs')
+
+app.use(bodyParser.json()); app.use(bodyParser.urlencoded({extended: true,}));
+
 
 app.use('/',express.static(__dirname+'/public'))
 
 app.get('/',(req,res)=>{
-    res.render('index.html')
+    res.render('index.hbs',{
+        stripePublicKey: stripePublicKey
+    })
 })
 
 app.post('/',(req,res)=>{
-    res.send('stripe')
+    payment={}
+    payment.name = req.body.name
+    payment.email = req.body.email
+    payment.phone = req.body.phone
+    payment.cost = 0
+    console.log(payment)
+    stripe.charges.create({
+        amount: payment.cost,
+        source: stripeTokenId,
+        currency:'usd'
+    }).then(function() {
+        console.log('Charge Successful')
+        res.json({ message: 'Successfully purchased items' })
+      }).catch(function(err) {
+          console.log(err)
+        console.log('Charge Fail')
+        res.status(500).end()
+      })
 })
 
 app.listen(port,()=>{
