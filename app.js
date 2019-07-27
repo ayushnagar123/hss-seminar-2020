@@ -1,10 +1,15 @@
+
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
+
+
+
+
 }
-const stripe = require("stripe")("sk_test_8g6aMIUlk2LCMpNPHQZOkkDF00Qat5UV3s");
+
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY;
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-
+const stripe = require("stripe")(STRIPE_SECRET_KEY);
 const express = require("express");
 const app = express();
 
@@ -12,11 +17,19 @@ const bodyParser = require("body-parser");
 
 const port = process.env.PORT || 3000;
 
+
 app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
+
+
+
+
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 app.use("/", express.static(__dirname + "/public"));
 
