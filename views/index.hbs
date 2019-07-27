@@ -37,7 +37,7 @@
     <link type="text/css" media="screen" rel="stylesheet" href="awwwards.css" />
     <script src="https://checkout.stripe.com/checkout.js" defer/></script>
     <script>
-        var stripePublicKey = {{stripePublicKeyv}}
+        var stripePublicKey = `{{stripePublicKey}}`
     </script>
     <script src="/js/script.js"></script>
     <!--[if lt IE 9]>
@@ -2622,7 +2622,14 @@
                     <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">Register now <small> / dont mıss event!</small></span>
                 </h1>
                 <form class="registration-form alt" action="/" method="post">
-                    <div class="row">
+                    <script
+                        src="https://checkout.stripe.com/checkout.js"
+                        data-key=`{{stripePublicKey}}`
+                        data-name="Emma's Farm CSA"
+                        data-description="Subscription for 1 weekly box"
+                        data-amount="0">
+                    </script>
+                                        <div class="row">
                         <div class="col-sm-12 form-alert"></div>
                         <div class="col-sm-12">
                             <div class="form-group">
@@ -2661,8 +2668,16 @@
                             <div class="text-center">
                                 <button
                                         data-animation="flipInY" data-animation-delay="100"
-                                        class="btn btn-theme btn-block submit-button" id="pay"
-                                        > Register Now <i class="glyphicon glyphicon-chevron-right"></i></button>
+                                        class="btn btn-theme btn-block submit-button stripe-button" id="pay"
+                                        > Register Now <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <script
+                                            src="https://checkout.stripe.com/checkout.js"
+                                            data-key="pk_test_eZcvww9Ss7BpX5l9UCiztXXX00xHM9Ne4H" class="stripe-button"
+                                            data-name="Emma's Farm CSA"
+                                            data-description="Subscription for 1 weekly box"
+                                            data-amount="0">
+                                        </script>
+                                </button>
                             </div>
                         </div>
                     </div>
