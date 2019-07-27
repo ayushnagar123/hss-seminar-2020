@@ -7,6 +7,7 @@ const stripePublicKey = process.env.STRIPE_PUBLIC_KEY;
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const stripe = require("stripe")(stripeSecretKey);
 const express = require("express");
+const fs = require('fs') 
 const app = express();
 
 const bodyParser = require("body-parser");
@@ -50,6 +51,24 @@ app.post("/", (req, res) => {
       console.log("Charge Fail");
       res.status(500).end();
     });
+    let PDF = require('handlebars-pdf')
+    rand = Math.random()
+let document = {
+        template: '<h1>{{msg}}</h1>'+
+        '<p style="color:red">Red text</p>'+
+        '<img src="https://archive.org/services/img/image" />',
+        context: {
+            msg: 'Hello world'
+        },
+        path: "./test-"+rand+".pdf"
+    }
+ PDF.create(document)
+    .then(res => {
+        console.log(res)
+    })
+    .catch(error => {
+        console.error(error)
+    })
 });
 
 app.listen(port, () => {

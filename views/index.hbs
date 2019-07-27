@@ -40,6 +40,19 @@
         var stripePublicKey = `{{stripePublicKey}}`
     </script>
     <script src="/js/script.js"></script>
+    <style>
+    .stripe-button-el span{
+        background:#dc143c !important;
+        height:60px !important;
+        padding:12px !important;
+        font-size: 18px !important;
+    }
+    .stripe-button-el{
+        width: 100%;
+        font-size: 18px;
+        display:block;
+    }
+    </style>
     <!--[if lt IE 9]>
     <script src="assets/plugins/iesupport/html5shiv.js"></script>
     <script src="assets/plugins/iesupport/respond.min.js"></script>
@@ -2623,7 +2636,7 @@
                 </h1>
                 <form class="registration-form alt" action="/" method="post">
                     <script
-                        src="https://checkout.stripe.com/checkout.js"
+                        src="https://checkout.stripe.com/checkout.js" action="/"
                         data-key=`{{stripePublicKey}}`
                         data-name="Emma's Farm CSA"
                         data-description="Subscription for 1 weekly box"
@@ -2666,18 +2679,13 @@
                         </div>
                         <div class="col-sm-12">
                             <div class="text-center">
-                                <button
-                                        data-animation="flipInY" data-animation-delay="100"
-                                        class="btn btn-theme btn-block submit-button stripe-button" id="pay"
-                                        > Register Now <i class="glyphicon glyphicon-chevron-right"></i>
                                         <script
                                             src="https://checkout.stripe.com/checkout.js"
-                                            data-key="pk_test_eZcvww9Ss7BpX5l9UCiztXXX00xHM9Ne4H" class="stripe-button"
+                                            data-key="{{stripePublicKey}}" class="stripe-button"
                                             data-name="Emma's Farm CSA"
                                             data-description="Subscription for 1 weekly box"
                                             data-amount="0">
                                         </script>
-                                </button>
                             </div>
                         </div>
                     </div>
